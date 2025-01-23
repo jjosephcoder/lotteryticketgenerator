@@ -5,6 +5,7 @@
 #include <windows.h> //Library for using Windows System Colours
 #include <mmsystem.h> //Library for accessing windows multimedia method
 #include <cstring> //Library for using string methods
+#include <limits>
 #include <cwchar> //Library for changing the font type and size in the output console
 //Accessibility Note: Helvetica is an easier font to read at distancxe
 #pragma comment(lib, "winmm.lib"); //USE PRAGMA TO ACCESS THE WINDOWS MEDIA LIBRARIES FOR PLAYSOUND
@@ -110,7 +111,13 @@ int main() {
   
          system("COLOR 2");    
     system("CLS");
-    
+    //These two lines of code clear the cin and the endspace return character so that
+    //only the first character from the imput is being processed so if we enter yes
+    //instead of y then we dont get the e or s value passed on through cin to the
+    //game selection options.
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+   
         while(option!="L" && option!="S"&& option!="E" && option!="T"&& option!="R"){  
             cout << "\n";
             cout << "\t\t\t\t    ****************************************" << endl;
@@ -135,7 +142,7 @@ int main() {
             cout << "\t\t\t\t      |Enter R for Random Game Selection  |" << endl;
             cout << "\t\t\t\t       -----------------------------------"   <<endl << endl;
             cout << "\t\t\t\tPlease Enter A Letter For The Game You Want To Play: ";
-   
+      
      cin >> option;  
    
     //option = toupper(option);
