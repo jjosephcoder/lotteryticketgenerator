@@ -79,7 +79,14 @@ int main() {
                 if(choice=='Q' || choice=='q'){
                 return 0;
                 }else if(choice!='Y' || choice!='y'){
-                    cout <<"\n\n";
+                    //cout <<"\n\n";
+                   // cout << "                              *****************************************************" << endl;
+                   // cout << "                              **Please Try Again Enter Q to Quit or Y to Continue**" << endl;
+                   // cout << "                              *****************************************************" << endl;
+                system("CLS");
+                }
+                else {
+                     cout <<"\n\n";
                     cout << "                              *****************************************************" << endl;
                     cout << "                              **Please Try Again Enter Q to Quit or Y to Continue**" << endl;
                     cout << "                              *****************************************************" << endl;
@@ -162,7 +169,7 @@ int main() {
     
     system("CLS");
     
-        if(option!="L" || option!="S"|| option!="E" || option!="T"|| option!="R"){
+        if(option!="L" && option!="S"&& option!="E" && option!="T"&& option!="R"){
                 cout << "                       *****************************************************************" << endl;
                 cout << "                       ***Please Try Again & Enter A Valid Option From The Menu Below***" <<endl;
                 cout << "                       *****************************************************************" << endl;
